@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Home.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <form action="./Formulaire.php" method="post">
+      <div>
         <div>
-            <div>
-                <h1>Formulaire</h1>
-                <div>
-                    <label for="">Entrer votre nom</label>
-                    <br>
-                    <input type="text" placeholder="Entrer votre nom" name="nom">
-                    <br>
-                    <label for="">Entrer votre prenom</label>
-                    <br>
-                    <input type="text" placeholder="Entrer votre prenom" name="firstname">
-                    <br>    
-                    <label for="">Entrer votre Commentaire</label>
-                    <br>
-                    <textarea type="text" placeholder="Entrer votre Commentaire" name="commentaire">
-                    <br>
-                    <input type="submit">
-                </div>
-                <a href="./Home.html">clic here to go Home</a>
-            </div>
+          <h1>Commentaire</h1>
+          <div class="C-contener">
+            <label for="">pseudo</label>
+            <input type="text" placeholder="Entrer votre nom" name="nom" />
+            <br />
+            <textarea
+              type="text"
+              placeholder="Entrer votre Commentaire"
+              name="commentaire"
+            ></textarea>
+            <br />
+          </div>
+          <input type="submit" />
+          <br />
+          <a href="./Home.html">retour</a>
         </div>
+      </div>
     </form>
-
-</body>
-
+  </body>
 </html>
