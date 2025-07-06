@@ -27,6 +27,8 @@ CREATE TABLE commentaires (
   PRIMARY KEY(id)
 );
 
+ALTER TABLE commentaire AUTO_INCREMENT = 1;
+
 ## 3. Les champs de la table devrait être comme ceci pour ce debut :
 
 | Champ         | Type         | Description                          |
