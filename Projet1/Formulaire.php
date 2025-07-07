@@ -7,9 +7,10 @@ if ($conn->connect_error) {
 // on recupere les données du formulaire
 $nom = $_POST['nom'];
 $commentaire = $_POST['commentaire'];
+$post_id = $_POST['post_id'];
 
 // 3. Requête SQL pour l'insetion
-$sql = "INSERT INTO commentaire (nom, commentaire) VALUES (?, ?)";
+$sql = "INSERT INTO commentaire (nom, commentaire, post_id) VALUES (?, ?, ?)";
 
 // Preparation de la requête
 $stmt = $conn->prepare($sql);
