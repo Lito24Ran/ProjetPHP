@@ -20,7 +20,7 @@ if (!$stmt) {
 }
 
 // 4. Liaison des paramètres et exécution
-$stmt->bind_param("ss", $nom, $commentaire);
+$stmt->bind_param("ss", $nom, $commentaire); // ici ss veut dire qu'il y aura deux string
 $stmt->execute();
 
 echo "Commentaire enregistré avec succès.<br>";
