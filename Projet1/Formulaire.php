@@ -7,7 +7,7 @@ if ($conn->connect_error) {
 // on recupere les données du formulaire
 $nom = $_POST['nom'];
 $commentaire = $_POST['commentaire'];
-$post_id = $_POST['post_id'];
+$post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
 
 // 3. Requête SQL pour l'insetion
 $sql = "INSERT INTO commentaires (nom, commentaire, post_id) VALUES (?, ?, ?)";
@@ -25,7 +25,7 @@ $stmt->bind_param("ssi", $nom, $commentaire, $post_id);
 if ($stmt->execute()) {
 
 echo "Commentaire enregistré avec succès.<br>";
-echo '<a href="./Home.html">Retour</a>';
+echo '<a href="./Home.php">Retour</a>';
 } else {
     echo "Erreur lors de l'enregistrement : " . $stmt->error;
 }

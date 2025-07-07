@@ -46,3 +46,28 @@ textarea {
   height: 50px;
   border-radius: 10px;
 }
+.comment {
+  width: 100%;
+  display: flex;
+}
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+  margin-bottom: -1.5%;
+}
+
+.icon-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.icon-button:hover img {
+  transform: scale(1.2);
+}
+.coms {
+  padding: 10%;
+}
