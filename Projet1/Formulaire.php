@@ -23,7 +23,6 @@ if (!$stmt) {
 // 4. Liaison des paramètres et exécution
 $stmt->bind_param("ssi", $nom, $commentaire, $post_id);
 if ($stmt->execute()) {
-
 echo "Commentaire enregistré avec succès.<br>";
 echo '<a href="./Home.php">Retour</a>';
 } else {

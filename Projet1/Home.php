@@ -19,6 +19,7 @@ $result_posts = $conn->query($sql_posts);
   </head>
 
   <body>
+    <h1>Com's e</h1>
     <div class="container">
       <div class="post">
         Ito zany sary nampidirin'i Lito sady manao test ihany hoe ahoana izy ato
@@ -95,11 +96,10 @@ $result_posts = $conn->query($sql_posts);
     </div>
     <div class="container">
       <div class="post">
-        Je vous presente moi et ma chere petit amie #VICMORE
-      </div>
+        Je vous presente la femme de ma vie <3 </div>
       <img
         src="./image/nana"
-        alt="Cette photo n'est pas disponible sur votre Pc"
+        alt="Cette photo n'est pas disponible sur votre pays"
       />
 
       <div class="post_action">
@@ -133,4 +133,7 @@ $result_posts = $conn->query($sql_posts);
     </div>
     <?php $conn->close(); ?>
   </body>
+  <footer>
+    zay fotsiny aloha 
+  </footer>
 </html>

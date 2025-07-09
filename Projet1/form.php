@@ -63,17 +63,20 @@ $modifier_id = isset($_GET['modifier_id']) ? intval($_GET['modifier_id']) : 0;
       <form method="post">
         <input type="hidden" name="id" value="<?= $row['id'] ?>">
         <label><?= htmlspecialchars($row['nom']) ?></label><br>
-        <!-- <input type="text" name="nom" value="<?= htmlspecialchars($row['nom']) ?>" required><br> -->
         <textarea name="commentaire" required><?= htmlspecialchars($row['commentaire']) ?></textarea><br>
         <button type="submit" name="modifier">Enregistrer</button>
         <a href="form.php?post_id=<?= $post_id ?>">Annuler</a>
       </form>
     <?php else: ?>
+
       <!-- Affichage simple du commentaire -->
+       <div class="com">
       <strong><?= htmlspecialchars($row['nom']) ?></strong> : 
       <?= nl2br(htmlspecialchars($row['commentaire'])) ?>
+      </div>
 
-      <!-- Icône modifier : redirige vers cette même page avec ?modifier_id=xxx -->
+ <div class="modif">
+      <!-- Icône modifier  -->
       <a href="form.php?post_id=<?= $post_id ?>&modifier_id=<?= $row['id'] ?>" class="icon-button">
         <img src="image/modif.png" alt="Modifier" />
       </a>
@@ -83,6 +86,7 @@ $modifier_id = isset($_GET['modifier_id']) ? intval($_GET['modifier_id']) : 0;
          onclick="return confirm('Supprimer ce commentaire ?')" class="icon-button">
         <img src="image/delete.png" alt="Supprimer" />
       </a>
+      </div>
     <?php endif; ?>
   </div>
 <?php endwhile; ?>
@@ -108,8 +112,7 @@ $modifier_id = isset($_GET['modifier_id']) ? intval($_GET['modifier_id']) : 0;
 
           <br />
         </div>
-        <input type="submit" value="envoyer" />
-        <br />
+        <input type="submit" value="Ok" />
   
         <a href="./Home.php">retour</a>
       </div>
